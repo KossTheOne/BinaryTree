@@ -29,7 +29,7 @@ public class ProgramRunner {
 
     private void executeSearchOperations() {
         System.out.println("Search operations -----------------------------------------------------");
-        long start_time_search = System.nanoTime();
+        long startTimeSearch = System.nanoTime();
         System.out.println(bt.search(randomPersons[4]));
         System.out.println(bt.search(randomPersons[8]));
         System.out.println(bt.search(randomPersons[7]));
@@ -38,8 +38,8 @@ public class ProgramRunner {
         System.out.println(bt.search(randomPersons[17]));
         System.out.println(bt.search(randomPersons[19]));
 
-        long end_time_search = System.nanoTime();
-        double difference_search = (end_time_search - start_time_search) / 1e6;
+        long endTimeSearch = System.nanoTime();
+        double difference_search = (endTimeSearch - startTimeSearch) / 1e6;
 
         System.out.println("----------------------------------------------------------------------");
         System.out.printf("Time spent on Search operations: %s seconds%n", difference_search );

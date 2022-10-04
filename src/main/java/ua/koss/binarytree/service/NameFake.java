@@ -4,7 +4,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import ua.koss.binarytree.model.Person;
 
-public interface Namefake {
+public interface NameFake {
     @GET("/")
     Call<Person> persons();
 }

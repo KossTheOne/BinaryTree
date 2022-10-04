@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class NameService {
     private static final String API_URL = "https://api.namefake.com/";
-    private final Namefake namefake;
+    private final NameFake nameFake;
 
     public NameService() {
         Gson gson = new GsonBuilder()
@@ -21,11 +21,11 @@ public class NameService {
                 .baseUrl(API_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
-        namefake = retrofit.create(Namefake.class);
+        nameFake = retrofit.create(NameFake.class);
     }
 
     public Person getRandomPerson() throws IOException {
-        Call<Person> response = namefake.persons();
+        Call<Person> response = nameFake.persons();
         Response<Person> personResponse = response.execute();
         return personResponse.body();
     }
